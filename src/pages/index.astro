@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import HeroSection from "../components/HeroSection.astro";
+import ChargeSection from "../components/ChargeSection.astro";
+---
+
+<Layout>
+	<Header />
+
+	<!-- snap-y: slider vertical snap-mandatory: siempre acabar en un slide y no quedarse en la mitad -->
+
+	<main
+		class="snap-y snap-mandatory relative w-full h-screen overflow-auto scroll-smooth"
+	>
+		<div class="snap-center">
+			<HeroSection />
+		</div>
+		<div class="snap-center">
+			<ChargeSection />
+		</div>
+	</main>
+</Layout>
