@@ -7,19 +7,19 @@ import Logo from "../components/Logo.astro";
     class="py-3 px-10 flex items-center fixed top-0 w-full justify-between z-40 text-white"
 >
     <div class="flex flex-grow basis-0">
-        <Logo />
+        <a href="#home"><Logo /></a>
     </div>
 
     <nav class="hidden xl:block sm:hidden">
         <ul
             class="flex text-sm [&>li>a]:transition-colors [&>li>a]:duration-500 [&>li>a]:text-current [&>li>a]: font-medium [&>li>a]:inline-block [&>li>a]:px-4 [&>li>a]:py-2"
         >
-            <li><a href="#">Model S</a></li>
-            <li><a href="#">Model 3</a></li>
-            <li><a href="#">Model X</a></li>
-            <li><a href="#">Model Y</a></li>
-            <li><a href="#">Powewall</a></li>
-            <li><a href="#">Carga</a></li>
+            <li><a href="#model-S">Model S</a></li>
+            <li><a href="#model-3">Model 3</a></li>
+            <li><a href="#model-X">Model X</a></li>
+            <li><a href="#model-Y">Model Y</a></li>
+            <li><a href="#power-wall">Powewall</a></li>
+            <li><a href="#carga">Carga</a></li>
         </ul>
     </nav>
     <nav class="flex flex-grow justify-end basis-0">
@@ -53,7 +53,7 @@ import Logo from "../components/Logo.astro";
                 class="pt-8 [&>li]:mb-4 [&>li>a]:text-black [&>li>a]:flex [&>li>a]:justify-between [&>li>a]:py-4 [&>li>a]:pl-3"
             >
                 <li>
-                    <a href="#">
+                    <a href="#model-S">
                         Model S
                         <img
                             class="h-5"
@@ -63,7 +63,7 @@ import Logo from "../components/Logo.astro";
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#model-3">
                         Model 3
                         <img
                             class="h-5"
@@ -73,7 +73,7 @@ import Logo from "../components/Logo.astro";
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#model-X">
                         Model X
                         <img
                             class="h-5"
@@ -83,7 +83,7 @@ import Logo from "../components/Logo.astro";
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#model-Y">
                         Model Y
                         <img
                             class="h-5"
@@ -93,7 +93,7 @@ import Logo from "../components/Logo.astro";
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#power-wall">
                         Powerwall
                         <img
                             class="h-5"
@@ -103,7 +103,7 @@ import Logo from "../components/Logo.astro";
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#carga">
                         Carga
                         <img
                             class="h-5"
@@ -174,6 +174,10 @@ import Logo from "../components/Logo.astro";
         });
 
         item.addEventListener("mouseleave", () => {
+            menuBackDrop.style.opacity = "0";
+            menuBackDrop.style.visibility = "hidden";
+        });
+        item.addEventListener("click", () => {
             menuBackDrop.style.opacity = "0";
             menuBackDrop.style.visibility = "hidden";
         });
